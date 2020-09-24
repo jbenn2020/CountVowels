@@ -1,0 +1,20 @@
+﻿<Window x:Name="frmMain" x:Class="CountVowels.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CountVowels"
+        mc:Ignorable="d"
+        Title="Count Vowels" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="txtBlockInstruction" TextWrapping="Wrap" 
+                   Text="Enter any text below. All vowels, uppercase and lowercase, will be counted. Y is not considered to be a vowel." HorizontalAlignment="Left" Height="70" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
+        <TextBox x:Name="txtParagraph" HorizontalAlignment="Left" Height="100" Margin="10,80,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272" TextChanged="txtParagraph_TextChanged" KeyDown="txtParagraph_KeyDown" TabIndex="0"/>
+        <Button x:Name="btnCount" Content="Count" HorizontalAlignment="Left" Height="30" Margin="10,205,0,0" VerticalAlignment="Top" Width="65" Click="btnCount_Click" TabIndex="1" IsTabStop="True" />
+        <TextBox x:Name="txtCount" HorizontalAlignment="Left" Height="20" Margin="94,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65" IsReadOnly="True" IsTabStop="True"/>
+
+    </Grid>
+</Window>
